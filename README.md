@@ -8,12 +8,15 @@ includes the following stack:
 - virtualenv
 - bottlepy
 
-This environment is based on the original instructions from
-http://www.tengiz.net/bootlepy-nginx-uwsgi-python3-with-virtualenv-on-debian/
+This environment is based on the original instructions from [here](http://www.tengiz.net/bootlepy-nginx-uwsgi-python3-with-virtualenv-on-debian/)
 
 
 To Build:
-  docker build -t bottlebase .
+```
+docker build -t bottlebase git@github.com:blebo/docker-bottlebase.git
+```
 
 To Run:
-  docker run -d -p 80:80 bottlebase
+```
+docker run -d -p 80:80 bottlebase
+```
