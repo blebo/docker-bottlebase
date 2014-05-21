@@ -13,7 +13,7 @@ RUN pip3 install virtualenv
 RUN mkdir -p /var/www/bottlebase
 
 # Add local files to the image.
-# TODO Change this to a git clone comment in the future.
+# TODO Change this to a git clone command in the future.
 ADD . /var/www/bottlebase/
 
 # Configure nginx to run well with docker?
