@@ -1,0 +1,16 @@
+server {
+        server_name localhost;
+
+        listen  80;
+        listen  [::]:80 default ipv6only=on;
+
+        root /var/www/bottlebase;
+
+        access_log /var/log/nginx/bottlebase.access.log;
+        error_log /var/log/nginx/bottlebase.error.log;
+
+        location / {
+                uwsgi_pass unix:/tmp/uwsgi.bottlebase.socket;
+                include uwsgi_params;
+        }
+}
